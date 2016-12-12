@@ -4,7 +4,8 @@ var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 
 var app = express();
-var port = 3000;
+var port = process.env.PORT || 3000;
+var mongoDBURI = process.env.MONGODB_URI || "mongodb://localhost:27017/baked";
 
 app.use(bodyParser.urlencoded({ extended:false }));
 app.use(methodOverride('_method'));
@@ -17,7 +18,7 @@ app.use('/cakes', cakesController);
 var usersController = require('./controllers/usersController.js');
 app.use('/users', usersController);
 
-mongoose.connect('mongodb://localhost:27017/baked');
+mongoose.connect(mongoDBURI);
 mongoose.connection.once('open', function(){
     console.log("DB: Connected");
 });
