@@ -14,14 +14,26 @@
         </header>
 
         <nav>
-            <button><a href="/">HOME</a></button>
+            <h3>Back to the main page</h3><br>
+            <button><a href="/">HOME</a></button><br>
+            <h3>Cake Gallery</h3>
             <button><a href="/cakes">CAKE INDEX</a></button>
         </nav>
 
-        <main>
-            <!-- <button><a href="/users/new">Log In</a></button><br> -->
-            <button><a href="/users/new">Add a new user</a></button>
-        </main>
+        <section>
+            <% for (var i = 0; i < users.length; i++){ %>
+                <%= users[i].name %><br>
+                <button><a href="/users/edit">Remove User</a></button><br>
+            <% } %>
+        </section>
 
+        <main>
+            <h3>Join the club</h3>
+            <!-- <button><a href="/users/new">Log In</a></button><br> -->
+            <button><a href="/users/new">Add a new user</a></button><br>
+
+
+
+        </main>
     </body>
 </html>

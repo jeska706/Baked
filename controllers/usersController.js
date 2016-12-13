@@ -1,22 +1,41 @@
 var express = require('express');
 var router = express.Router();
-var User = require('../models/user.js');
-var Cake = require('../models/cake.js');
+var User = require('../models/users.js');
+var Cake = require('../models/cakes.js');
 
 
 //INDEX
 router.get('/', function( req, res ){
     // res.send("User's index page");
-    res.render("users/index.ejs");
-    // User.find({}, function ( err, users){
-    //     if (err) {console.log( "There's an error in the index route: ", err)}
-    //     res.render('users/index.ejs', { allUsers: users});
+    User.find({}, function ( err, users){
+        if (err) {console.log( "There's an error in the index route: ", err)}
+        res.render('users/index.ejs', {
+            users: users
+        });
+    });
+});
+
+//CREATE ROUTE
+router.post('/', function( req, res ){
+    // Cake.findByIdAndUpdate(req.body.cakeId, function(err, cake){
+        User.create(req.body, function(err, user){
+            // cake.users.push(user);
+            // cake.save(function(err, data){
+                res.redirect('/users');
+            });
+        // });
     // });
 });
 
 //NEW ROUTE
-router.get('/new', function( req, res){
-    res.render('users/new.ejs');
+router.get('/new', function( req, res ){
+    User.find({}, function( err, user ){
+        res.render('users/new.ejs', {
+        user: user,
+        });
+        // res.redirect('/cakes')
+
+    });
 });
 
 //SHOW ROUTE

@@ -7,11 +7,11 @@
     </head>
     <body>
         <header>
-            <h1>Welcome to Baked Cakes Index</h1>
+            <h1>Welcome to <br>Baked Cakes Index</h1>
         </header>
         <nav>
 
-                <button><a href="/">HOME PAGE</a></button>
+                <button><a href="/">HOME PAGE</a></button><br>
                 <button><a href="/users">USER'S INDEX PAGE</a></button>
 
         </nav>
@@ -19,7 +19,10 @@
             <a href="/cakes/show">Images of cakes</a>
 
         <div class="cakes">
-            
+            <% for (var i = 0; i < cakes.length; i++){ %>
+                <%= cakes[i].name %><br>
+                <img src="/cakes/<%= cakes[i].img %>"/>
+            <% } %>
         </div>
     </body>
 </html>

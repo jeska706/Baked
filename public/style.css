@@ -4,9 +4,19 @@ body{
     background-image: url("http://www.publicdomainpictures.net/pictures/40000/velka/macro-table-sugar.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
+h1{
+    margin: 2em;
+    font-size: 2.5em;
+}
+
+h2 {
+    margin: 2em;
+}
 
 a{
     text-decoration: none;
+    font-size: 1.5em;
 }
