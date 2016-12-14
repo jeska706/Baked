@@ -3,8 +3,9 @@ var Schema = mongoose.Schema;
 
 var cakesSchema = new Schema({
     name: String,
-    img: String
-    // description: String,
+    img: String,
+    cite: String,
+    description: String
     // fillings:[],
     // frosting: String,
     // cakeType: String,

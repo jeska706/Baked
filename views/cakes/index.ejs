@@ -2,27 +2,47 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./style.css">
+        <link href="https://fonts.googleapis.com/css?family=Molle:400i|Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title></title>
     </head>
+
     <body>
-        <header>
-            <h1>Welcome to <br>Baked Cakes Index</h1>
-        </header>
-        <nav>
-
-                <button><a href="/">HOME PAGE</a></button><br>
-                <button><a href="/users">USER'S INDEX PAGE</a></button>
-
-        </nav>
-            <a href="/cakes/new">Add a new cake</a><br>
-            <a href="/cakes/show">Images of cakes</a>
-
-        <div class="cakes">
-            <% for (var i = 0; i < cakes.length; i++){ %>
-                <%= cakes[i].name %><br>
-                <img src="/cakes/<%= cakes[i].img %>"/>
-            <% } %>
+        <div class="shadow">
+            <header>
+                <div class="w3-card-2 w3-slim topnav" id="topnav" style="position:relative; top:0px;">
+                    <div class="overflow:auto;">
+                        <ul class="w3-navbar w3-left" style="width:55%;overflow:hidden;height:44px">
+                            <div class="float">
+                                <a href="/" class="btn btn-info btn-sm">
+                                    <span class="glyphicon glyphicon-menu-hamburger">
+                                        <ul>
+                                            <li><a href="/" class="btn btn-info btn-sm">Home Page</a></li>
+                                            <li><a href="/users" class="btn btn-info btn-sm">User's Index Page</a></li>
+                                            <li><a href="/cakes" class="btn btn-info btn-sm">Cake's Index page</a></li>
+                                            <li><a href="/cakes/new" class="btn btn-info btn-sm">Create a New Cake</a></li>
+                                            <li><a href="/users/new" class="btn btn-info btn-sm">Create a New User</a></li>
+                                        </ul>
+                                    </span>
+                                </a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <h1>Welcome to Baked Cakes Index</h1>
+                <div >
+                    <% for (var i = 0; i < allCakes.length; i++){ %>
+                        <a href="/cakes/<%= allCakes[i]._id%>">
+                            <div class="cakes">
+                                <h3><%= allCakes[i].name %></h3><br>
+                                <img src="<%= allCakes[i].img %>"/><br>
+                            </div>
+                        </a>
+                    <% } %>
+                </div>
         </div>
     </body>
 </html>

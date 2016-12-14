@@ -6,48 +6,56 @@ var Cake = require('../models/cakes.js');
 
 //INDEX
 router.get('/', function( req, res ){
-    // res.send("User's index page");
     User.find({}, function ( err, users){
-        if (err) {console.log( "There's an error in the index route: ", err)}
         res.render('users/index.ejs', {
-            users: users
+            allUsers: users
         });
     });
 });
 
 //CREATE ROUTE
 router.post('/', function( req, res ){
-    // Cake.findByIdAndUpdate(req.body.cakeId, function(err, cake){
-        User.create(req.body, function(err, user){
-            // cake.users.push(user);
-            // cake.save(function(err, data){
-                res.redirect('/users');
-            });
-        // });
-    // });
+    User.create(req.body, function(err, user){
+        res.redirect('/users');
+    });
 });
 
 //NEW ROUTE
 router.get('/new', function( req, res ){
-    User.find({}, function( err, user ){
-        res.render('users/new.ejs', {
-        user: user,
-        });
-        // res.redirect('/cakes')
-
-    });
+    res.render('users/new.ejs');
 });
 
 //SHOW ROUTE
 router.get('/:id', function( req, res ){
-    // res.send("users show page");
-    res.render('users/show.ejs');
+    User.findById(req.params.id, function( err, user ){
+        res.render('users/show.ejs', {
+            user: user
+        });
+    });
 });
 
+//DELETE ROUTE
+router.delete('/:id', function( req, res ){
+    User.findByIdAndRemove(req.params.id, function( err, user ){
+        res.redirect('/users');
+    });
+});
 
+//UPDATE ROUTE
+router.put('/:id', function( req, res ){
+    User.findByIdAndUpdate(req.params.id, req.body, function (err, data){
+        res.redirect('/users');
+    });
+});
 
-
-
+//EDIT ROUTE
+router.get('/:id/edit', function( req, res ){
+    User.findById(req.params.id, function (err, user){
+        res.render('users/edit.ejs', {
+            user: user
+        });
+    });
+});
 
 
 module.exports = router;

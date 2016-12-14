@@ -2,13 +2,11 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
-
 var app = express();
-
 var port = process.env.PORT || 3000;
 var mongoDBURI = process.env.MONGODB_URI || "mongodb://localhost:27017/baked";
 
-app.use(bodyParser.urlencoded({ extended:false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 app.use(express.static("public"));
 
@@ -21,7 +19,7 @@ app.use('/users', usersController);
 
 mongoose.connect(mongoDBURI);
 mongoose.connection.once('open', function(){
-    console.log("DB: Connected");
+    console.log("Connected to mongoDB");
     // //testing the db code----delete
     // var User = require('./models/user.js');
     // var newData = { name: "Cam" };

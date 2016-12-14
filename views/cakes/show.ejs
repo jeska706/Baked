@@ -2,21 +2,39 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style.css">
+        <link href="https://fonts.googleapis.com/css?family=Molle:400i|Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title></title>
     </head>
     <body>
-
-        <header>
-            <h1>CAKES INDEX PAGE</h1>
-        </header>
-
-        <nav>
-            <a href="/">HOME PAGE</a>
-            <a href="/new">Add a new cake</a>
-        </nav>
-        <div class="cakes">
-
+        <div class="shadow">
+            <header>
+                <h1><%= cake.name %>'s Show page</h1>
+            </header>
+            <section>
+                <h2><%= cake.name %></h2>
+                    <div class="cakesShow">
+                        <img src="<%= cake.img %>" alt=""/>
+                        <a href="<%= cake.cite._id %>"><%= cake.cite %></a>
+                        <p><%= cake.description %></p><br>
+                    </div>
+            </section>
+            <section>
+                <h2>Edit or delete this cake</h2>
+                <form class="" action="/cakes/<%= cake._id %>?_method=DELETE" method="POST">
+                    <input type="submit" name="" value="DELETE"/>
+                </form><br>
+                <button><a href="/cakes/<%= cake._id %>/edit">EDIT</a></button>
+            </section>
+            <nav>
+                <a href="/">Home Page</a>
+                <a href="/cakes">Cake's Index Page</a>
+                <a href="/new">Add a New Cake</a><br>
+                <a href="/users">User's Index Page</a>
+                <a href="/users/new">Add a New User</a>
+            </nav>
         </div>
     </body>
 </html>
