@@ -27,6 +27,7 @@ router.get('/new', function( req, res ){
 
 //SHOW ROUTE
 router.get('/:id', function( req, res ){
+    console.log(req.params.id);
     User.findById(req.params.id, function( err, user ){
         res.render('users/show.ejs', {
             user: user

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="/style.css">
         <link href="https://fonts.googleapis.com/css?family=Molle:400i|Montserrat" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title></title>
@@ -11,23 +11,32 @@
     <body>
         <div class="shadow">
             <header>
-                <h1>EDIT PAGE</h1>
+                <div class="w3-card-2 w3-slim topnav" id="topnav" style="position:relative; top:0px;">
+                    <div class="overflow:auto;">
+                        <ul class="w3-navbar w3-left" style="width:55%;overflow:hidden;height:44px">
+                            <div class="float">
+                                    <a href="/">Home Page</a>
+                                    <a href="/cakes">Cake's Index page</a>
+                                    <a href="/cakes/new">Create a New Cake</a>
+                                    <a href="/users">User's Index Page</a>
+                                    <a href="/users/new">Create a New User</a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
             </header>
-
-            <nav>
-                <ul>
-                    <li><a href="/">HOME PAGE</a></li>
-                </ul>
-            </nav>
-
-            <main>
-                <form class="" action="/cakes/<%= cake._id %>?_method=PUT" method="POST">
-                    <input type="text" name="name" value="<%= cake.name %>"/><br>
-                    <input type="text" name="img" value="<%= cake.img %>"/><br>
-                    <textarea name="description"><%= cake.description %></textarea><br>
-                    <input type="submit" value="Update this cake">
-                </form>
-            </main>
+                <h1>EDIT PAGE</h1>
+                    <main>
+                        <form class="" action="/cakes/<%= cake._id %>?_method=PUT" method="POST">
+                            <input type="text" name="name" value="<%= cake.name %>"/><br>
+                            <input type="text" name="img" value="<%= cake.img %>"/><br>
+                            <input type="text" name="cite" value="<%= cake.cite %>"></a><br>
+                            <input type="text" name="origin" value="<%= cake.origin %>"><br>
+                            <textarea name="description"><%= cake.description %></textarea><br>
+                            <input type="submit" value="Update this cake">
+                        </form>
+                    </main>
+                <footer></footer>
         </div>
     </body>
 </html>

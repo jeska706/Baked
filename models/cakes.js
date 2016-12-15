@@ -5,6 +5,7 @@ var cakesSchema = new Schema({
     name: String,
     img: String,
     cite: String,
+    origin: String,
     description: String
     // fillings:[],
     // frosting: String,

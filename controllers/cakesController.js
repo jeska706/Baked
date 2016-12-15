@@ -23,15 +23,16 @@ router.get("/new", function( req, res ){
     });
 });
 
+
 //DELETE ROUTE
 router.delete('/:id', function( req, res ){
     Cake.findByIdAndRemove(req.params.id, function( err, cake ){
-    //     User.findOne({"cakes._id": req.params.id}, function( err, user){
-    //         user.cakes.id(req.params.id).remove();
-    //         user.save(function( err, data ){
+        // User.findOne({"cakes._id": req.params.id}, function( err, user){
+        //     user.cakes.id(req.params.id).remove();
+        //     user.save(function( err, data ){
                 res.redirect('/cakes');
-    //         });
-    //     });
+        //     });
+        // });
     });
 });
 
@@ -49,8 +50,8 @@ router.get('/:id', function( req, res ){
     Cake.findById(req.params.id, function (err, cake){
         // User.findOne({ "cakes._id": req.params.id}, function( err, user){
             res.render('cakes/show.ejs', {
-            //     user: user,
-               cake: cake
+                // user: user,
+                cake: cake
             // });
         });
     });
@@ -72,13 +73,20 @@ router.put('/:id', function( req, res ){
         //     user.cakes.id(req.params.id).remove();
         //     user.cakes.push(req.body);
         //     user.save(function( err, data ){
-                res.redirect('/cakes/' + req.params.id);
-        //     });
+                res.redirect('/cakes/' , req.params.id);
+            // });
         // });
     });
 });
 
 
+//SEED
+router.get('/seed', function( req, res){
+    var data = require('../cakes.js');
+    Cake.create(data, function( err, cakes){
+        res.redirect('/cakes');
+    });
+});
 
 
 

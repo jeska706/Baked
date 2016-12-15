@@ -11,14 +11,26 @@
     <body>
         <div class="shadow">
             <header>
-                <h1>User's Show Page</h1>
+                <div class="w3-card-2 w3-slim topnav" id="topnav" style="position:relative; top:0px;">
+                    <div class="overflow:auto;">
+                        <ul class="w3-navbar w3-left" style="width:55%;overflow:hidden;height:44px">
+                            <div class="float">
+                                <a href="/">Home Page</a>
+                                <a href="/cakes">Cake's Index page</a>
+                                <a href="/cakes/new">Create a New Cake</a>
+                                <a href="/users">User's Index Page</a>
+                                <a href="/users/new">Create a New User</a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
             </header>
-            <nav>
-                <a href="/">Home Page</a>
-                <a href="/users">User's Index Page</a>
-                <a href="/cakes">Cake's Index page</a>
-                <a href="/users/new">Create a New User</a>
-            </nav>
+                <h1>User's Show Page</h1>
+                <a href="/users/<%=user._id%>/edit">Edit</a>
+                <form class="" action="/users/<%= user._id %>?_method=DELETE" method="POST">
+                    <input type="submit" name="" value="DELETE"/>
+                </form><br>
+            <footer></footer>
         </div>
     </body>
 </html>
