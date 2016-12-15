@@ -19,10 +19,23 @@
             </div>
 
             <h1><%= user.name %>'s page</h1>
+            <hr>
+            <h3>Baked goods in your gallery</h3>
 
-            <a href="/users/<%=user._id%>/edit">Edit</a>
+            <div class="usersShow">
+                <% for(var i = 0; i < user.cakes.length; i++){ %>
+                    <a href="/cakes/<%= user.cakes[i]._id %>">
+                        <%= user.cakes[i].name %><br>
+                        <img src="<%= user.cakes[i].img %>"/>
+                    </a>
+                <% } %>
+            </div>
+
+            <hr>
+
+            <button><a href="/users/<%=user._id%>/edit">Edit <%= user.name %>'s Account</a></button>
             <form class="" action="/users/<%= user._id %>?_method=DELETE" method="POST">
-                <input type="submit" name="" value="DELETE"/>
+                <input type="submit" name="" value="Delete <%= user.name %>'s Account"/>
             </form>
 
             <footer></footer>

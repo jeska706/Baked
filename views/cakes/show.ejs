@@ -27,21 +27,34 @@
                     </div>
                     <div class="info">
                         <h2><%= cake.name %></h2><br>
-                        <p><%= cake.description %></p>
+                        <p><%= cake.description %></p><br>
+                        Added by: <a href="/users/<%= user._id %>"><h3><%= user.name %></h3></a>
                     </div>
                 </div>
             </section>
 
             <section class="base">
+
                 <hr>
+
                 <h3>Edit or delete this cake</h3>
+                <button>
+                    <a href="/cakes/<%= cake._id %>/edit">Edit <%= cake.name %></a>
+                </button>
                 <form action="/cakes/<%= cake._id %>?_method=DELETE" method="POST">
-                    <input type="submit" name="" value="DELETE"/>
+                    <input type="submit" value="Delete <%= cake.name %> from the gallery"/>
                 </form><br>
-                <button><a href="/cakes/<%= cake._id %>/edit">EDIT</a></button>
+
+                <span class="fit">
+                    <h4>More on this @:
+                        <a href="<%= cake.cite._id %>">
+                            <%= cake.cite %>
+                        </a>
+                    </h4>
+                </span>
             </section>
 
-            <footer>More on this @:<a href="<%= cake.cite._id %>"><%= cake.cite %></a></footer>
+            <footer></footer>
         </div>
     </body>
 </html>

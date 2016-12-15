@@ -140,6 +140,16 @@ h3{
     margin-left: 1em;
     clear: both;
 }
+.usersShow{
+    width: 60%;
+    margin: 2em;
+    display: inline-block;
+
+}
+.usersShow img{
+    border-radius: 2em;
+    width: 20em;
+}
 .info{
     display: inline-block;
     width: 30%;
@@ -151,22 +161,33 @@ h3{
     display: block;
     clear: both;
     margin-top: 2em;
-}
 
+}
+/*.fit{
+    width: 30em;
+}*/
+.small{
+    width: 20%;
+    border-radius: 1em;
+}
 .forms{
     padding: 5em;
 }
+
 hr{
     width: 80%;
     margin: 2em auto;
 }
+
 input, textarea, button{
-    width: 40%;
+    width: 50%;
     text-align: center;
     padding: 1em;
 }
 
-
 footer{
     height: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
 }
