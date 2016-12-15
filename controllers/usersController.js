@@ -38,8 +38,14 @@ router.get('/:id', function( req, res ){
 //DELETE ROUTE
 router.delete('/:id', function( req, res ){
     User.findByIdAndRemove(req.params.id, function( err, user ){
-        res.redirect('/users');
+        for( var i = 0; i < user.cakes.length; i++){
+            Cake.findByIdAndRemove(user.cakes[i]._id, function( err, data){
+                // res.redirect('/users');
+                console.log(data, "deleted");
+            });
+        };
     });
+    res.redirect('/users');
 });
 
 //UPDATE ROUTE
