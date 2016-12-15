@@ -3,42 +3,68 @@
     padding: 0;
 }
 body{
-    /*background-image: url("http://www.publicdomainpictures.net/pictures/40000/velka/macro-table-sugar.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;*/
     text-align: center;
     margin: 2em;
     color: #000000;
     z-index: 1;
 }
-/*HOME PAGE*/
+.brownie{
+    background-image: url('./images/brownies.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.truffles{
+    background-image: url('./images/truffles.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*****************HOME PAGE***************/
 #mainPage{
-    background-color: #4d4d4d;
     background-image: url("./images/mainPic.jpg");
     background-repeat: no-repeat;
-
-}
-#tri{
-    width: 100%;
-	height: 0%;
-	border-top: 300px solid rgba(87, 85, 85, 0.66);
-	border-right: 1000px solid transparent;
-    position: absolute;
-    z-index: 1;
-
-}
-#logo{
-    float: left;
-    /*height: 10em;
-    width: 10em;*/
-    padding: .1em;
-    background-color: #FFFFFF;
+    background-size: cover;
+    background-color: black;
+    overflow: auto;
     position: relative;
-    margin: 1em 0 0 1em;
-    z-index: 2;
-    text-align: center;
-    font-size: 5em;
+    z-index: 1;
 }
+
+#logo{
+    font-family: 'Roboto', sans-serif;
+    border: 1em solid black;
+    padding: 1em;
+    background-color: rgba(249, 250, 252,0.5);
+    height: 20%;
+    font-size: 5em;
+    text-align: center;
+    letter-spacing: .5em;
+}
+
+#homeNavBar{
+    /*display: inline-block;*/
+    z-index: 2;
+    height: 75%;
+    position: absolute;
+    top: 30em;
+    left: -1.5em;
+    text-align: center;
+    margin-left: 1.5em:
+}
+
+#homeNavBar img{
+    width: 4em;
+}
+
+#one img:hover{
+    width: 4.5em;
+}
+
+#two img:hover{
+    width: 4.5em;
+}
+
+/*************end of home page***************/
+/*all pages other than home*/
 .shadow{
     border: .1em;
     margin: 5em;
@@ -47,43 +73,49 @@ body{
     -moz-box-shadow: 10px 12px 143px 12px rgba(0,0,0,0.75);
     box-shadow: 10px 12px 143px 12px rgba(0,0,0,0.75);
     z-index: 2;
+    height:70%;
+}
+/*nav bar on each page*/
+.home{
+    margin-left: 1em;
+    display:block;
+    float:left;
+    padding: 1em;
+}
+/*nav icons*/
+.home img{
+    width: 2em;
+}
+/*nav icons on hover*/
+.home img:hover{
+    width: 2.5em;
 }
 
-div.topnav{
-    margin: 0;
-    padding: 0;
-}
-
-.topnav{
-    z-index: 3;
-    font-size: 17px;
-    background-color: #a6a6a6;
-    width: 100%;
-    letter-spacing: 1px;
-}
-
-.w3-card-2, .w3-example{
-    box-shadow: 0 2px 4px 0
-    rgba(0,0,0,0.16),0 2px 10px 0
-    rgba(0,0,0,0.12)!important;
-}
-/*h1{
+h1{
     font-size: 5em;
-    padding: 2em;
-}*/
+    padding-top: 3em;
+    padding-bottom: 1em;
+    margin-top: 2.5em;
+}
 
 h2 {
     width: 50%;
     margin: auto;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    /*padding-top: 2em;
+    padding-bottom: 2em;*/
 }
 
 h3{
-    margin-top: 1em;
+    /*margin-top: 1em;*/
     padding: 1em;
 }
+/*individual cakes on index page*/
+.cakes{
+    display: inline-block;
+    margin: 1em;
+    border: 1em solid white;
 
+}
 .cakes img{
     width: 12em;
     height: 12em;
@@ -91,37 +123,50 @@ h3{
     z-index: 2;
     background-size: cover;
     border-radius: 2em;
-
 }
-
+.contain{
+    width: 80%;
+    height: 80%;
+    display: inline-block;
+    padding: 1em;
+}
 .cakesShow img{
     width: 50%;
     height: auto;
     padding: 1em;
     text-align: center;
-}
-.float{
     display: inline-block;
-    float:right;
-    margin-right: .5em;
-    margin-top: .3em;
+    float: left;
+    margin-left: 1em;
+    clear: both;
 }
+.info{
+    display: inline-block;
+    width: 30%;
+    float: right;
+    margin-right: 5em;
+}
+/*edit & delete blocks*/
+.base{
+    display: block;
+    clear: both;
+    margin-top: 2em;
+}
+
 .forms{
     padding: 5em;
 }
-
+hr{
+    width: 80%;
+    margin: 2em auto;
+}
 input, textarea, button{
     width: 40%;
     text-align: center;
-    padding: 2em;
+    padding: 1em;
 }
 
 
 footer{
     height: 2em;
-}
-
-.container{
-    width: 20em;
-    height: 30em;
 }

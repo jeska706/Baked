@@ -9,25 +9,16 @@
         <title></title>
     </head>
 
-    <body>
+    <body class="truffles">
         <div class="shadow">
-            <header>
-                <div class="w3-card-2 w3-slim topnav" id="topnav" style="position:relative; top:0px;">
-                    <div class="overflow:auto;">
-                        <div class="w3-navbar w3-left" style="width:55%;overflow:hidden;height:44px">
-                            <div class="float">
-                                <a href="/">Home Page</a>
-                                <a href="/cakes">Cake's Index page</a>
-                                <a href="/cakes/new">Create a New Cake</a>
-                                <a href="/users">User's Index Page</a>
-                                <a href="/users/new">Create a New User</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <h1>Welcome to Baked Cakes Index</h1>
-                <div class="container">
+            <div class="home">
+                <a href="/"><img src="../images/house.png"></a>
+                <a href="/users"><img src="../images/user.png"></a>
+                <a href="/users/new"><img src="../images/user.png"></a>++
+                <a href="/cakes/new"><img src="../images/cake.png"></a>++
+            </div>
+            <h1>Baked Cakes Index</h1>
+                <div class="contain">
                     <% for (var i = 0; i < allCakes.length; i++){ %>
                         <a href="/cakes/<%= allCakes[i]._id%>">
                             <div class="cakes">

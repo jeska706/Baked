@@ -8,23 +8,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title></title>
     </head>
-    <body>
+    <body class="brownie">
         <div class="shadow">
-            <header>
-                <div class="w3-card-2 w3-slim topnav" id="topnav" style="position:relative; top:0px;">
-                    <div class="overflow:auto;">
-                        <ul class="w3-navbar w3-left" style="width:55%;overflow:hidden;height:44px">
-                            <div class="float">
-                                    <a href="/">Home Page</a>
-                                    <a href="/cakes">Cake's Index page</a>
-                                    <a href="/cakes/new">Create a New Cake</a>
-                                    <a href="/users">User's Index Page</a>
-                                    <a href="/users/new">Create a New User</a>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-            </header>
+            <div class="home">
+                <a href="/"><img src="../images/house.png"></a>
+                <a href="/users"><img src="../images/user.png"></a>
+                <a href="/cakes"><img src="../images/cake.png"></a>
+                <a href="/cakes/new"><img src="../images/cake.png"></a>++
+            </div>
                 <h1>Add a New User</h1>
                     <form  action="/users" method="POST">
                         <input type="text" name="name" placeholder="Name"><br>

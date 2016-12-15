@@ -27,12 +27,7 @@ router.get("/new", function( req, res ){
 //DELETE ROUTE
 router.delete('/:id', function( req, res ){
     Cake.findByIdAndRemove(req.params.id, function( err, cake ){
-        // User.findOne({"cakes._id": req.params.id}, function( err, user){
-        //     user.cakes.id(req.params.id).remove();
-        //     user.save(function( err, data ){
-                res.redirect('/cakes');
-        //     });
-        // });
+        res.redirect('/cakes');
     });
 });
 
@@ -48,11 +43,8 @@ router.get('/:id/edit', function( req, res ){
 //SHOW ROUTE
 router.get('/:id', function( req, res ){
     Cake.findById(req.params.id, function (err, cake){
-        // User.findOne({ "cakes._id": req.params.id}, function( err, user){
-            res.render('cakes/show.ejs', {
-                // user: user,
-                cake: cake
-            // });
+        res.render('cakes/show.ejs', {
+            cake: cake
         });
     });
 });
@@ -69,13 +61,7 @@ router.post('/', function( req, res){
 //UPDATE ROUTE
 router.put('/:id', function( req, res ){
     Cake.findByIdAndUpdate(req.params.id, req.body, function (err, data){
-        // User.findOne({ "cakes._id":req.params.id }, function (err, user){
-        //     user.cakes.id(req.params.id).remove();
-        //     user.cakes.push(req.body);
-        //     user.save(function( err, data ){
-                res.redirect('/cakes/' , req.params.id);
-            // });
-        // });
+        res.redirect('/cakes');
     });
 });
 
