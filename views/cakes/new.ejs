@@ -18,7 +18,7 @@
                 <!-- <a href="/pies"><img src="../images/icons/pie.png"></a>
                 <a href="/pies/new"><img src="../images/icons/pie.png"></a><b>++</b> -->
             </div>
-                <h1>Create a New Cake</h1>
+                <h1>Add a New Baked Item</h1>
                 <form action="/cakes/" method="post">
                     <div class="forms">
                         <select name="userId" >
@@ -26,11 +26,11 @@
                                 <option value="<%= users[i]._id %>"><%= users[i].name %></option>
                             <% } %>
                         </select><br>
-                        <input type="text" name="name" placeholder="Cake Name"><br>
+                        <input type="text" name="name" placeholder=" Name"><br>
                         <input type="text" name="img" placeholder="Image URL"><br>
                         <input type="text" name="cite" placeholder="Cite your source"><br>
                         <input type="text" name="origin" placeholder="Origin"><br>
-                        <textarea name="description" placeholder="Cake description"></textarea><br>
+                        <textarea name="description" placeholder="Description"></textarea><br>
                         <!-- <input type="text" name="frosting" placeholder="Frosting"><br>
                         <input type="text" name="cakeType" placeholder="Type of Cake Crumb"><br>
                         <input type="text" name="finish" placeholder="Finish"><br>
