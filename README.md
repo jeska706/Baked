@@ -1,12 +1,12 @@
 # Baked
 ##Unit 2 project
-![baked app]()
+![screencapture-bakedjes-herokuapp-1481902373677](https://cloud.githubusercontent.com/assets/22794560/21268061/4d019dbc-c36a-11e6-92ce-54d9130eb2c4.png)
 A Web app photo gallery for baked goods
 
 Welcome to Baked
 where you can view and add images of baked goods and create a personal gallery.
 
-#####The technology used for this project:
+#####The technology used for this project
 HTML, CSS, Javascript, Json, Node.Js, Mongo, Heroku, Photoshop
 
 #####The node-modules used here are:
