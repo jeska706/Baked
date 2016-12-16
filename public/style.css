@@ -34,16 +34,17 @@ body{
     z-index: 1;
 }
 
-#logo{
-    font-family: 'Roboto', sans-serif;
-    border: 1em solid black;
-    padding: 1em;
+#logo h1{
+    font-family: 'Nunito Sans', sans-serif;
+    border: 1.5em solid black;
+    padding-top: 15%;
+    padding-bottom: 15%;
     background-color: rgba(249, 250, 252,0.5);
-    height: 20%;
-    font-size: 5em;
+    font-size: 200%;
     text-align: center;
-    letter-spacing: .5em;
+    letter-spacing: 2.5em;
     margin: 1em;
+    /*font-weight: bolder;*/
 }
 
 #homeNavBar{
@@ -51,7 +52,7 @@ body{
     z-index: 2;
     height: 45%;
     position: absolute;
-    top: 6em;
+    top: 110%;
     left: -1.5em;
     text-align: center;
     margin-left: 1.5em:
@@ -89,7 +90,7 @@ body{
     -moz-box-shadow: 10px 12px 143px 12px rgba(0,0,0,0.75);
     box-shadow: 10px 12px 143px 12px rgba(0,0,0,0.75);
     z-index: 2;
-    height:70%;
+    /*height:200%;*/
 }
 /*nav bar on each page*/
 .home{
@@ -108,17 +109,20 @@ body{
 }
 
 h1{
-    font-size: 5em;
-    padding-top: 3em;
-    padding-bottom: 1em;
-    margin-top: 2.5em;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 4em;
+    /*padding-top: 2em;
+    padding-bottom: 1em;*/
+    margin-top: 3em;
+    padding: 1em;
+    clear: both;
 }
 
 h2 {
+    font-family: 'Nunito Sans', sans-serif;
     width: 50%;
     margin: auto;
-    /*padding-top: 2em;
-    padding-bottom: 2em;*/
+
 }
 
 h3{
@@ -160,12 +164,12 @@ h3{
     width: 60%;
     margin: 2em;
     display: inline-block;
-
 }
 .usersShow img{
     border-radius: 2em;
     width: 20em;
 }
+
 .info{
     display: inline-block;
     width: 30%;
@@ -205,5 +209,10 @@ footer{
     height: 2em;
     padding-top: 1em;
     padding-bottom: 1em;
+
+}
+a{
+    text-decoration: none;
+    color: #000000;
 
 }

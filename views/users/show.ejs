@@ -24,14 +24,15 @@
             <hr>
             <h3>Baked goods in your gallery</h3>
 
-            <div class="usersShow">
-                <% for(var i = 0; i < user.cakes.length; i++){ %>
-                    <a href="/cakes/<%= user.cakes[i]._id %>">
-                        <%= user.cakes[i].name %><br>
-                        <img src="<%= user.cakes[i].img %>"/>
-                    </a>
-                <% } %>
-            </div>
+            <% for(var i = 0; i < user.cakes.length; i++){ %>
+                <div class="usersShow">
+                <a href="/cakes/<%= user.cakes[i]._id %>">
+                    <%= user.cakes[i].name %><br>
+                    <img src="<%= user.cakes[i].img %>"/>
+                </a>
+                </div>
+            <% } %>
+
             <!-- <div class="usersShow">
                 <%# for(var i = 0; i < user.pies.length; i++){ %>
                     <a href="/pies/<%# user.pies[i]._id %>">
