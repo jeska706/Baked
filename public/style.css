@@ -154,6 +154,7 @@ h3{
     display: inline-block;
     padding: 1em;
 }
+/*Show page*/
 .cakesShow img{
     width: 50%;
     height: auto;
@@ -173,13 +174,17 @@ h3{
     border-radius: 2em;
     width: 20em;
 }
-
+.display{
+    margin-top: 2em;
+}
+/*Cakes right display*/
 .info{
     display: inline-block;
-    width: 30%;
+    width: 40%;
     float: right;
     margin-right: 5em;
 }
+
 /*edit & delete blocks*/
 .base{
     display: block;
