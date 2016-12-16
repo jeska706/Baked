@@ -17,16 +17,13 @@ app.use('/cakes', cakesController);
 var usersController = require('./controllers/usersController.js');
 app.use('/users', usersController);
 
+// var piesController = require('./controllers/piesController.js');
+// app.use('/pies', piesController);
+
+
 mongoose.connect(mongoDBURI);
 mongoose.connection.once('open', function(){
     console.log("Connected to mongoDB");
-    // //testing the db code----delete
-    // var User = require('./models/user.js');
-    // var newData = { name: "Cam" };
-    // User.create(newData, function (err, createdUser){
-    //     if(err) { console.log('The err is: ', err)}
-    //         console.log(createdUser);
-    // });//db testing done
 });
 
 app.get('/', function (req, res){

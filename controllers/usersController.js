@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/users.js');
 var Cake = require('../models/cakes.js');
-
+// var Pie = require('../models/pies.js');
 
 //INDEX
 router.get('/', function( req, res ){
@@ -27,7 +27,6 @@ router.get('/new', function( req, res ){
 
 //SHOW ROUTE
 router.get('/:id', function( req, res ){
-    // console.log(req.params.id);
     User.findById(req.params.id, function( err, user ){
         res.render('users/show.ejs', {
             user: user
@@ -38,14 +37,18 @@ router.get('/:id', function( req, res ){
 //DELETE ROUTE
 router.delete('/:id', function( req, res ){
     User.findByIdAndRemove(req.params.id, function( err, user ){
+        // for( var i = 0; i < user.pies.length; i++){
+        //     Pie.findByIdAndRemove(user.pies[i]._id, function( err, data){
+        //         res.redirect('/users');
+        //     });
+        // };
         for( var i = 0; i < user.cakes.length; i++){
             Cake.findByIdAndRemove(user.cakes[i]._id, function( err, data){
-                // res.redirect('/users');
-                console.log(data, "deleted");
+                res.redirect('/users');
             });
         };
     });
-    res.redirect('/users');
+    // res.redirect('/users');
 });
 
 //UPDATE ROUTE

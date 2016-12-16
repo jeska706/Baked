@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title></title>
     </head>
-    <body class="truffles">
+    <body class="pies">
         <div class="shadow">
             <div class="home">
                 <a href="/"><img src="../images/icons/house.png"></a>
@@ -16,21 +16,21 @@
                 <a href="/users/new"><img src="../images/icons/user.png"></a><b>++</b>
                 <a href="/cakes"><img src="../images/icons/cake.png"></a>
                 <a href="/cakes/new"><img src="../images/icons/cake.png"></a><b>++</b>
-                <!-- <a href="/pies"><img src="../images/icons/pie.png"></a> -->
-                <!-- <a href="/pies/new"><img src="../images/icons/pie.png"></a><b>++</b> -->
+                <a href="/pies"><img src="../images/icons/pie.png"></a>
+                <a href="/pies/new"><img src="../images/icons/pie.png"></a><b>++</b>
             </div>
-            <h1><%= cake.name %>'s page</h1>
+            <h1><%# pie.name %>'s page</h1>
 
             <hr>
             <section>
                 <div >
                     <div class="cakesShow">
-                        <img src="<%= cake.img %>"/>
+                        <img src="<%# pie.img %>"/>
                     </div>
                     <div class="info">
-                        <h2><%= cake.name %></h2><br>
-                        <p><%= cake.description %></p><br>
-                        Added by: <a href="/users/<%= user._id %>"><h3><%= user.name %></h3></a>
+                        <h2><%# pie.name %></h2><br>
+                        <p><%# pie.description %></p><br>
+                        Added by: <a href="/users/<%# user._id %>"><h3><%# user.name %></h3></a>
                     </div>
                 </div>
             </section>
@@ -39,18 +39,18 @@
 
                 <hr>
 
-                <h3>Edit or delete this cake</h3>
+                <h3>Edit or delete this pie</h3>
                 <button>
-                    <a href="/cakes/<%= cake._id %>/edit">Edit <%= cake.name %></a>
+                    <a href="/pies/<%# pie._id %>/edit">Edit <%# pie.name %></a>
                 </button>
-                <form action="/cakes/<%= cake._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete <%= cake.name %> from the gallery"/>
+                <form action="/pies/<%# pie._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete <%# pie.name %> from the gallery"/>
                 </form><br>
 
                 <span class="fit">
                     <h4>More on this @:
-                        <a href="<%= cake.cite._id %>">
-                            <%= cake.cite %>
+                        <a href="<%# pie.cite._id %>">
+                            <%# pie.cite %>
                         </a>
                     </h4>
                 </span>
@@ -59,4 +59,4 @@
             <footer></footer>
         </div>
     </body>
-</html>
+</html> -->

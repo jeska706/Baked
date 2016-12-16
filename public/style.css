@@ -9,18 +9,23 @@ body{
     z-index: 1;
 }
 .brownie{
-    background-image: url('./images/brownies.jpeg');
+    background-image: url('./images/photos/brownies.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 .truffles{
-    background-image: url('./images/truffles.png');
+    background-image: url('./images/photos/truffles.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pies{
+    background-image: url('./images/photos/pies2.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 /*****************HOME PAGE***************/
 #mainPage{
-    background-image: url("./images/mainPic.jpg");
+    background-image: url("./images/photos/mainPic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
@@ -38,17 +43,21 @@ body{
     font-size: 5em;
     text-align: center;
     letter-spacing: .5em;
+    margin: 1em;
 }
 
 #homeNavBar{
-    /*display: inline-block;*/
+    display: inline-block;
     z-index: 2;
-    height: 75%;
+    height: 45%;
     position: absolute;
-    top: 30em;
+    top: 6em;
     left: -1.5em;
     text-align: center;
     margin-left: 1.5em:
+    border: 1px solid rgba(249, 250, 252,0.5);
+    background-color: rgba(249, 250, 252,0.5);
+
 }
 
 #homeNavBar img{
@@ -63,6 +72,13 @@ body{
     width: 4.5em;
 }
 
+#three img:hover{
+    width: 4.5em;
+}
+
+#four img:hover{
+    width: 4.5em;
+}
 /*************end of home page***************/
 /*all pages other than home*/
 .shadow{
@@ -107,7 +123,7 @@ h2 {
 
 h3{
     /*margin-top: 1em;*/
-    padding: 1em;
+    /*padding: 1em;*/
 }
 /*individual cakes on index page*/
 .cakes{

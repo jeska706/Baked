@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,23 +9,23 @@
         <title></title>
     </head>
 
-    <body class="truffles">
+    <body class="pies">
         <div class="shadow">
             <div class="home">
                 <a href="/"><img src="../images/icons/house.png"></a>
                 <a href="/users"><img src="../images/icons/user.png"></a>
                 <a href="/users/new"><img src="../images/icons/user.png"></a><b>++</b>
+                <a href="/cakes"><img src="../images/icons/cake.png"></a>
                 <a href="/cakes/new"><img src="../images/icons/cake.png"></a><b>++</b>
-                <!-- <a href="/pies"><img src="../images/icons/pie.png"></a>
-                <a href="/pies/new"><img src="../images/icons/pie.png"></a><b>++</b> -->
+                <a href="/pies/new"><img src="../images/icons/pie.png"></a><b>++</b>
             </div>
-            <h1>Baked Cakes Index</h1>
+            <h1>Baked Pies Index</h1>
                 <div class="contain">
-                    <% for (var i = 0; i < allCakes.length; i++){ %>
-                        <a href="/cakes/<%= allCakes[i]._id%>">
+                    <%# for (var i = 0; i < allPies.length; i++){ %>
+                        <a href="/pies/<%# allPies[i]._id%>">
                             <div class="cakes">
-                                <h3><%= allCakes[i].name %></h3><br>
-                                <img src="<%= allCakes[i].img %>"/><br>
+                                <h3><%# allPies[i].name %></h3><br>
+                                <img src="<%# allPies[i].img %>"/><br>
                             </div>
                         </a>
                     <% } %>
@@ -33,4 +33,4 @@
         </div>
         <footer></footer>
     </body>
-</html>
+</html> -->

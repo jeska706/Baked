@@ -11,15 +11,17 @@
     <body class="truffles">
         <div class="shadow">
             <div class="home">
-                <a href="/"><img src="/images/house.png"></a>
-                <a href="/users"><img src="/images/user.png"></a>
-                <a href="/users/new"><img src="/images/user.png"></a>++
-                <a href="/cakes"><img src="/images/cake.png"></a>
-                <a href="/cakes/new"><img src="/images/cake.png"></a>++
+                <a href="/"><img src="/images/icons/house.png"></a>
+                <a href="/users"><img src="/images/icons/user.png"></a>
+                <a href="/users/new"><img src="/images/icons/user.png"></a><b>++</b>
+                <a href="/cakes"><img src="/images/icons/cake.png"></a>
+                <a href="/cakes/new"><img src="/images/icons/cake.png"></a><b>++</b>
+                <!-- <a href="/pies"><img src="/images/icons/pie.png"></a>
+                <a href="/pies/new"><img src="/images/icons/pie.png"></a><b>++</b> -->
             </div>
             <h1>EDIT PAGE</h1>
                 <main>
-                    <form class="" action="/cakes/<%= cake._id %>?_method=PUT" method="POST">
+                    <form action="/cakes/<%= cake._id %>?_method=PUT" method="POST">
                         <input type="text" name="name" value="<%= cake.name %>"/><br>
                         <input type="text" name="img" value="<%= cake.img %>"/><br>
                         <input type="text" name="cite" value="<%= cake.cite %>"></a><br>

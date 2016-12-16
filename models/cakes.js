@@ -7,11 +7,6 @@ var cakesSchema = new Schema({
     cite: {type:String, default: "N/A"},
     origin: {type:String, default: "N/A"},
     description: {type:String, default: "N/A"}
-    // fillings:[],
-    // frosting: String,
-    // cakeType: String,
-    // decor: [],
-    // events: []
 });
 
 var Cake = mongoose.model('Cake', cakesSchema);

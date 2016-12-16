@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,33 +8,28 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title></title>
     </head>
-    <body class="truffles">
+    <body class="pies">
         <div class="shadow">
             <div class="home">
                 <a href="/"><img src="../images/icons/house.png"></a>
                 <a href="/users"><img src="../images/icons/user.png"></a>
                 <a href="/users/new"><img src="../images/icons/user.png"></a><b>++</b>
                 <a href="/cakes"><img src="../images/icons/cake.png"></a>
-                <!-- <a href="/pies"><img src="../images/icons/pie.png"></a>
-                <a href="/pies/new"><img src="../images/icons/pie.png"></a><b>++</b> -->
+                <a href="/pies"><img src="../images/icons/pie.png"></a>
             </div>
-                <h1>Create a New Cake</h1>
-                <form action="/cakes/" method="post">
+                <h1>Create a New Pie</h1>
+                <form action="/pies/" method="post">
                     <div class="forms">
                         <select name="userId" >
-                            <% for(var i = 0; i < users.length; i++){ %>
-                                <option value="<%= users[i]._id %>"><%= users[i].name %></option>
+                            <%# for(var i = 0; i < users.length; i++){ %>
+                                <option value="<%# users[i]._id %>"><%# users[i].name %></option>
                             <% } %>
                         </select><br>
-                        <input type="text" name="name" placeholder="Cake Name"><br>
+                        <input type="text" name="name" placeholder="Pie Name"><br>
                         <input type="text" name="img" placeholder="Image URL"><br>
                         <input type="text" name="cite" placeholder="Cite your source"><br>
                         <input type="text" name="origin" placeholder="Origin"><br>
-                        <textarea name="description" placeholder="Cake description"></textarea><br>
-                        <!-- <input type="text" name="frosting" placeholder="Frosting"><br>
-                        <input type="text" name="cakeType" placeholder="Type of Cake Crumb"><br>
-                        <input type="text" name="finish" placeholder="Finish"><br>
-                        <input type="text" name="events" placeholder="Event types for this cake"><br>  -->
+                        <textarea name="description" placeholder="Pie description"></textarea><br>
                         <input type="submit" value="SUBMIT">
                     </div>
                 </form>
@@ -42,4 +37,4 @@
             </footer>
         </div>
     </body>
-</html>
+</html> -->
