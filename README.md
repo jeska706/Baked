@@ -1,6 +1,6 @@
 # Baked
 ##Unit 2 project
-![screencapture-bakedjes-herokuapp-1481902373677](https://cloud.githubusercontent.com/assets/22794560/21268061/4d019dbc-c36a-11e6-92ce-54d9130eb2c4.png)
+![screencapture-bakedjes-herokuapp-1481905017917](https://cloud.githubusercontent.com/assets/22794560/21269578/73b0d6a2-c370-11e6-9096-9208dac3398d.png)
 A Web app photo gallery for baked goods
 
 **Welcome to Baked**
